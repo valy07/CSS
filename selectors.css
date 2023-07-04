@@ -1,0 +1,51 @@
+1. plate ----------------------------------------------- div selects all div elements.
+-------------------------------------------------------- p selects all p elements.
+2. bento ----------------------------------------------- div selects all div elements.
+-------------------------------------------------------- p selects all p elements.
+3. #fancy ---------------------------------------------- #cool selects any element with id="cool"
+-------------------------------------------------------- ul#long selects ul id="long"
+4. plate apple ----------------------------------------- p  strong selects all strong elements that are inside of any p
+-------------------------------------------------------- #fancy  span selects any span elements that are inside of the element with id="fancy"
+5. #fancy pickle --------------------------------------- #cool span selects all span elements that are inside of elements with id="cool"
+6. .small ---------------------------------------------- .neato selects all elements with class="neato"
+7. orange.small ---------------------------------------- ul.important selects all ul elements that have class="important"
+8. bento orange.small----------------------------------- ul.important selects all ul elements that have class="important" from specific parent
+9. plate, bento ---------------------------------------- a, p, div selects all a, p and div elements
+10. * -------------------------------------------------- selects any element
+11. plate * --------------------------------------------- p * selects any element inside all p elements
+12. plate + apple --------------------------------------- p + .intro selects every element with class="intro" that directly follows a p element
+--------------------------------------------------------- div + a selects every a element that directly follows a div
+13. bento ~ pickle -------------------------------------- A ~ B selects all B that follow a A
+14. plate > apple --------------------------------------- A > B selects all B that are a direct children A
+15. orange:first-child ---------------------------------- :first-child selects all first child elements.
+--------------------------------------------------------- p:first-child selects all first child p elements.
+--------------------------------------------------------- div p:first-child selects all first child p elements that are in a div.
+16. apple:only-child, plate pickle:only-child ----------- span:only-child selects the span elements that are the only child of some other element.
+--------------------------------------------------------- ul li:only-child selects the only li element that are in a ul.
+17. pickle:last-child, plate apple:last-child ------------ :last-child selects all last-child elements.
+---------------------------------------------------------- span:last-child selects all last-child span elements.
+---------------------------------------------------------- ul li:last-child selects the last li elements inside of any ul.
+18. plate:nth-child(3) ----------------------------------- :nth-child(8) selects every element that is the 8th child of another element.
+---------------------------------------------------------- div p:nth-child(2) selects the second p in every div
+19. bento:nth-last-child(3) ------------------------------ :nth-last-child(2) selects all second-to-last child elements.
+20. apple:first-of-type ---------------------------------- span:first-of-type selects the first span in any element.
+21. plate:nth-of-type(even) ------------------------------ div:nth-of-type(2) selects the second instance of a div.
+---------------------------------------------------------- .example:nth-of-type(odd) selects all odd instances of a the example class.
+22. plate:nth-of-type(2n+3) ------------------------------ span:nth-of-type(6n+2) selects every 6th instance of a span, starting from (and including) the second instance.
+23. plate apple:only-of-type ----------------------------- p span:only-of-type selects a span within any p if it is the only span in there.
+24. orange:last-of-type, apple:last-of-type -------------- div:last-of-type selects the last div in every element.
+---------------------------------------------------------- p span:last-of-type selects the last span in every p.
+25. bento:empty ------------------------------------------ div:empty selects all empty div elements.
+26. apple:not(.small) ------------------------------------ :not(#fancy) selects all elements that do not have id="fancy".
+---------------------------------------------------------- div:not(:first-child) selects every div that is not a first child.
+---------------------------------------------------------- :not(.big, .medium) selects all elements that do not have class="big" or class="medium".
+27. [for] ------------------------------------------------ a[href] selects all a elements that have a href="anything" attribute.
+---------------------------------------------------------- [type] selects all elements that have a type="anything". attribute
+28. plate[for] ------------------------------------------- [value] selects all elements that have a value="anything" attribute.
+---------------------------------------------------------- a[href] selects all a elements that have a href="anything" attribute.
+---------------------------------------------------------- input[disabled] selects all input elements with the disabled attribute
+29. bento[for='Vitaly'] ---------------------------------- input[type="checkbox"] selects all checkbox input elements.
+30. [for^='Sa'] ------------------------------------------ .toy[category^="Swim"] selects elements with class toy and either category="Swimwear or category="Swimming".
+31. [for$='ato'] ----------------------------------------- img[src$=".jpg"] selects all images display a .jpg image.
+32. [for*='obb'] ----------------------------------------- img[src*="/thumbnails/"] selects all image elements that show images from the "thumbnails" folder.
+---------------------------------------------------------- [class*="heading"] selects all elements with "heading" in their class, like class="main-heading" and class="sub-heading"
